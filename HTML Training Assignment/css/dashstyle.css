@@ -1,0 +1,74 @@
+.sidebar {
+
+    background: #d3838381 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.logo {
+
+    height: 2.5rem;
+}
+
+.icon {
+    color: red;
+    width: 20px;
+    height: 20px;
+}
+
+input#search {
+    background-image: url(../images/search-icon.svg);
+    background-repeat: no-repeat;
+    text-indent: 30px;
+}
+
+.sidebar-items a.active {
+    color: red;
+}
+
+
+
+.sidebar-items a {
+    color: #3E3E3E;
+}
+
+.sidebar-items a:hover {
+    color: red;
+}
+
+
+.stat-box {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    height: 100%;
+    width: 200px;
+    color: #3E3E3E;
+}
+
+.stat-box h6 {
+    font-size: 18px;
+}
+
+.stat-box img {
+    flex-shrink: 0;
+}
+
+.d-m-y li .active {
+    color: #C8242F
+}
+
+.d-m-y li a {
+    color: #ADADAD;
+    text-decoration: underline;
+}
+
+.d-m-y li a:hover {
+    color: #C8242F;
+}
+
+.sales {
+    font: normal normal medium 22px/29px Roboto;
+    letter-spacing: 0px;
+    color: #3E3E3E;
+    opacity: 1;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/dashstyle.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand ms-2" href="#">
+                <img src="./images/logo.svg" width="140">
+            </a>
+
+            <form class="d-none d-md-flex mx-auto w-50">
+                <input class="form-control" type="search" placeholder="Search">
+            </form>
+
+            <div class="collapse navbar-collapse" id="topNav">
+                <div class="ms-auto d-flex align-items-center gap-4 mt-3 mt-lg-0">
+                    <img src="./images/notification-icon.svg" width="22">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./images/profile.png" width="32" class="rounded-circle">
+                        <span class="fw-medium">John Doe</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- sidebar -->
+            <aside class="col-lg-2 d-none d-lg-block vh-100 p-3 bg-red">
+                <div class="d-flex flex-column gap-3">
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold"
+                        style="color:#C8242F;">
+                        <img src="./images/dashboard-active.svg" width="20"> Dashboard
+                    </a>
+
+                    <a href="./innerpage.html" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/graph-default.svg" width="20"> Analysis
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/inbox-default.svg" width="20"> Inbox
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/clock-default.svg" width="20"> History
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/user-default.svg" width="20"> Users
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/maintenance-default.svg" width="20"> Maintenance
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/search-icon.svg" width="20"> Settings
+                    </a>
+
+                </div>
+            </aside>
+
+
+            <div class=" col-12 col-lg-10">
+                <h4 class="mt-4">Dashboard</h4>
+                <div class="row g-4 mt-5">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <div class="stat-box d-flex align-items-center gap-3">
+                            <img src="./images/star.svg" width="28">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">23,456</h6>
+                                <span class="text-muted">New Products</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <div class="stat-box d-flex align-items-center gap-3">
+                            <img src="./images/new-product.svg" width="28">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">2345</h6>
+                                <span class="text-muted">Added Products</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <div class="stat-box d-flex align-items-center gap-3">
+                            <img src="./images/total-product.svg" width="28">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">32,456</h6>
+                                <span class="text-muted">Total Products</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <div class="stat-box d-flex align-items-center gap-3">
+                            <img src="./images/dollar-filled.svg" width="28">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">5678</h6>
+                                <span class="text-muted">Today's Sale</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <div class="stat-box d-flex align-items-center gap-3">
+                            <img src="./images/money-bag.svg" width="28">
+                            <div>
+                                <h6 class="mb-0 fw-semibold">33,5342</h6>
+                                <span class="text-muted">Total Sale</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row d-flex">
+                    <div class="row mt-5 g-4">
+                        <div class="col-12 col-lg-8">
+                            <div class="row ">
+                                <span class="col-1 justify-content-start fs-3 sales">Sales</span>
+                                <ul class=" d-m-y nav col-11 justify-content-end ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Weekly</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Monthly</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Yearly</a>
+                                    </li>
+                                </ul>
+                                <img src="./images/data-graph.png" class="img-fluid col-12">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4 text-center">
+                            <div class="row">
+                                <h5 class="col-12">Sales by Country</h5>
+                                <img src="./images/pie-chart.svg" class="img-fluid">
+                                <div class="row">
+                                    <span class="col-6">United States of America</span>
+                                    <span class="col-6">Canada</span>
+                                    <br>
+                                    <span class="col-6">Russia</span>
+                                    <span class="col-6">India</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="d-flex justify-content-between">
+                        <h6>Invoices</h6>
+                        <span class="text-danger">View All</span>
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                        <table class="table table-borderless">
+                            <thead class="text-muted">
+                                <tr>
+                                    <th>Invoice</th>
+                                    <th>Company</th>
+                                    <th>Email</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>651535</td>
+                                    <td>Public Adjusting Firm</td>
+                                    <td>georgia.young@example.com</td>
+                                    <td>24 May 2020</td>
+                                    <td class="text-success fw-bold">Paid</td>
+                                    <td>$47,800</td>
+                                </tr>
+                                <tr>
+                                    <td>651535</td>
+                                    <td>Subcontractor</td>
+                                    <td>jackson.graham@example.com</td>
+                                    <td>1 Feb 2020</td>
+                                    <td class="text-danger fw-bold">Failed</td>
+                                    <td>$10,200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

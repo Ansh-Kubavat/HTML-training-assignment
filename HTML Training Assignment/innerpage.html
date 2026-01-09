@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/dashstyle.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand ms-2" href="#">
+                <img src="./images/logo.svg" width="140">
+            </a>
+
+            <form class="d-none d-md-flex mx-auto w-50">
+                <input class="form-control" type="search" placeholder="Search">
+            </form>
+
+            <div class="collapse navbar-collapse" id="topNav">
+                <div class="ms-auto d-flex align-items-center gap-4 mt-3 mt-lg-0">
+                    <img src="./images/notification-icon.svg" width="22">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./images/profile.png" width="32" class="rounded-circle">
+                        <span class="fw-medium">John Doe</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- sidebar -->
+            <aside class="col-lg-2 d-none d-lg-block vh-100 p-3 bg-red">
+                <div class="d-flex flex-column gap-3">
+
+                    <a href="./dashboard.html" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/dashboard-default.svg" width="20"> Dashboard
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold "
+                        style="color:#C8242F;">
+                        <img src="./images/graph-active.svg" width="20"> Analysis
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/inbox-default.svg" width="20"> Inbox
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/clock-default.svg" width="20"> History
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/user-default.svg" width="20"> Users
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/maintenance-default.svg" width="20"> Maintenance
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                        <img src="./images/search-icon.svg" width="20"> Settings
+                    </a>
+
+                </div>
+            </aside>
+
+            <main class="col-lg-10">
+                <h4 class="mt-4">Analysis</h4>
+                <div class="row">
+                    <form class="p-3 col-12">
+                        <h5>One Column</h5>
+
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+                        </div>
+
+                        <select class="form-control mb-3">
+                            <option>Default select</option> 
+                            <img src="./images/downward-arrow.svg" alt="fgsd" >
+                        </select>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+            </main>
+
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
