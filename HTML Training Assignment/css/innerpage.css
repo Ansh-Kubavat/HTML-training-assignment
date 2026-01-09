@@ -1,0 +1,29 @@
+.nav-tabs .nav-link.active{
+    border:none;
+    border-bottom: 2px solid #C8242F;
+    color: #C8242F;
+    font-weight: 500;
+    background-color: white;
+}
+
+.nav-tabs .nav-link:not(.active){
+    border: none;
+    color: #ADADAD;
+}
+
+.form-check-input[type="radio"]:checked{
+
+    border-color: #C8242F;
+    background-color: #C8242F;
+    box-shadow: none;
+}
+input[type="radio"]:checked  + .form-check-label{
+    color: #C8242F  ;
+}
+
+.form-check-input[type="checkbox"]:checked{
+
+    border-color: #C8242F;
+    background-color: #C8242F;
+    box-shadow: none;
+}
