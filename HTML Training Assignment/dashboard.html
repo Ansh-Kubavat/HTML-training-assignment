@@ -6,38 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/dashstyle.css">
-    <script src="./js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <!-- navbar -->
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3 sticky-top shadow-sm">
+
         <div class="container-fluid">
+            <img class=" d-lg-none me-2" type="button" data-bs-toggle="offcanvas" src="./images/menu-bar.svg"
+                data-bs-target="#sidebarOffcanvas" alt="menu-bar">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <a class="navbar-brand ms-2" href="#">
-                <img src="./images/logo.svg" width="140">
+            <a class="navbar-brand me-auto" href="#">
+                <img src="./images/logo.svg" width="140" alt="Company Logo">
             </a>
 
-            <form class="d-none d-md-flex mx-auto w-50">
-                <input class="form-control" type="search" placeholder="Search">
+            <form class="d-none  d-md-flex mx-auto w-50">
+                <input class="form-control search-input rounded-pill bg-light border-0" type="search"
+                    placeholder="Search">
             </form>
 
-            <div class="collapse navbar-collapse" id="topNav">
-                <div class="ms-auto d-flex align-items-center gap-4 mt-3 mt-lg-0">
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="#" class="text-dark position-relative d-sm-flex d-none">
                     <img src="./images/notification-icon.svg" width="22">
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="./images/profile.png" width="32" class="rounded-circle">
-                        <span class="fw-medium">John Doe</span>
-                    </div>
+                </a>
+                <div class="d-flex align-items-center gap-2 ms-1">
+                    <img src="./images/profile.png" width="32" class="rounded-circle border">
+                    <span class="fw-medium d-none d-sm-inline">John Doe</span>
+                    <img src="./images/downward-arrow.svg" alt="">
                 </div>
             </div>
-
         </div>
     </nav>
 
@@ -48,7 +47,7 @@
                 <div class="d-flex flex-column gap-3">
 
                     <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold"
-                        style="color:#C8242F;">
+                        style="color:#C8242F; background-color: #FFF3F4;">
                         <img src="./images/dashboard-active.svg" width="20"> Dashboard
                     </a>
 
@@ -73,16 +72,57 @@
                     </a>
 
                     <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
-                        <img src="./images/search-icon.svg" width="20"> Settings
+                        <img src="./images/setting-default.svg" width="20"> Settings
                     </a>
 
                 </div>
             </aside>
 
 
-            <div class=" col-12 col-lg-10">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" style="width: 250px;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="nav-links d-flex flex-column gap-3">
+                        <a href="./dashboard.html"
+                            class="d-flex align-items-center gap-3 text-decoration-none  fw-bold  "
+                            style="color:#C8242F; background-color: #FFF3F4;">
+                            <img src="./images/dashboard-active.svg" width="20"> Dashboard
+                        </a>
+
+                        <a href="./innerpage.html"
+                            class="d-flex align-items-center gap-3 text-decoration-none text-dark ">
+                            <img src="./images/graph-default.svg" width="20"> Analysis
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/inbox-default.svg" width="20"> Inbox
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/clock-default.svg" width="20"> History
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/user-default.svg" width="20"> Users
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/maintenance-default.svg" width="20"> Maintenance
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/setting-default.svg" width="20"> Settings
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-12 col-lg-10 dashboard">
                 <h4 class="mt-4">Dashboard</h4>
-                <div class="row g-4 mt-5">
+                <div class="row g-4 mt-5 px-2">
                     <div class="col-12 col-sm-6 col-md-4 col-lg">
                         <div class="stat-box d-flex align-items-center gap-3">
                             <img src="./images/star.svg" width="28">
@@ -135,87 +175,216 @@
                     </div>
 
                 </div>
-                <div class="row d-flex">
-                    <div class="row mt-5 g-4">
+
+                <div class="container-fluid px-2">
+                    <div class="row g-4 mt-5">
+
+
                         <div class="col-12 col-lg-8">
-                            <div class="row ">
-                                <span class="col-1 justify-content-start fs-3 sales">Sales</span>
-                                <ul class=" d-m-y nav col-11 justify-content-end ">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Weekly</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Monthly</a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Yearly</a>
-                                    </li>
-                                </ul>
-                                <img src="./images/data-graph.png" class="img-fluid col-12">
+                            <div class="bg-white p-4 h-100">
+
+
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="mb-0">Sales</h4>
+
+                                    <ul class="nav gap-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link p-0 text-muted d-none d-md-block" href="#">Weekly</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-0 text-muted d-none d-md-block" href="#">Monthly</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-0 text-danger fw-semibold border-bottom border-danger d-none d-md-block "
+                                                href="#">
+                                                Yearly
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <img src="./images/data-graph.png" class="img-fluid w-100" alt="Sales Graph">
+
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-4 text-center">
-                            <div class="row">
-                                <h5 class="col-12">Sales by Country</h5>
-                                <img src="./images/pie-chart.svg" class="img-fluid">
-                                <div class="row">
-                                    <span class="col-6">United States of America</span>
-                                    <span class="col-6">Canada</span>
-                                    <br>
-                                    <span class="col-6">Russia</span>
-                                    <span class="col-6">India</span>
+                        <div class="col-12 col-lg-4">
+                            <div class="bg-white rounded-3 shadow-sm p-4 h-100 text-center">
 
+                                <h5 class="mb-4">Sales by Country</h5>
+
+                                <img src="./images/pie-chart.svg" class="img-fluid w-75 mx-auto d-block"
+                                    alt="Sales by Country">
+
+
+                                <div class="row mt-4 text-start">
+                                    <div class="col-6 mb-2">United States of America</div>
+                                    <div class="col-6 mb-2">Canada</div>
+                                    <div class="col-6">Russia</div>
+                                    <div class="col-6">India</div>
                                 </div>
 
                             </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="mt-5">
-                    <div class="d-flex justify-content-between">
-                        <h6>Invoices</h6>
-                        <span class="text-danger">View All</span>
+
+                <div class="container-fluid px-2 mt-4">
+
+                    <div class="bg-white rounded-3 shadow-sm p-4">
+
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">Invoices</h5>
+                            <a href="#" class="text-danger text-decoration-none fw-medium">View All</a>
+                        </div>
+
+
+                        <div class="table-responsive">
+                            <table class="table align-middle mb-0">
+                                <thead class="text-muted text-uppercase small">
+                                    <tr>
+                                        <th>Invoice</th>
+                                        <th>Company Name</th>
+                                        <th>Email</th>
+                                        <th>Due Date</th>
+                                        <th>Status</th>
+                                        <th class="text-end">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>651535</td>
+                                        <td>Public Adjusting Firm</td>
+                                        <td>georgia.young@example.com</td>
+                                        <td>24 May, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$47,800</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>558612</td>
+                                        <td>Other</td>
+                                        <td>jessica.hanson@example.com</td>
+                                        <td>24 May, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$98,000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>558612</td>
+                                        <td>Vendor</td>
+                                        <td>alma.lawson@example.com</td>
+                                        <td>8 Sep, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$20,900</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>558612</td>
+                                        <td>Property Management Company</td>
+                                        <td>kenzi.lawson@example.com</td>
+                                        <td>22 Oct, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$10,570</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>651535</td>
+                                        <td>Subcontractor Company</td>
+                                        <td>jackson.graham@example.com</td>
+                                        <td>1 Feb, 2020</td>
+                                        <td>
+                                            <span class="badge bg-danger-subtle text-danger fw-normal px-3 py-2">
+                                                Failed
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$10,200</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>653518</td>
+                                        <td>Mortgage Company</td>
+                                        <td>felicia.reid@example.com</td>
+                                        <td>22 Oct, 2020</td>
+                                        <td>
+                                            <span class="badge bg-secondary-subtle text-secondary fw-normal px-3 py-2">
+                                                Pending
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$12,600</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>487441</td>
+                                        <td>TPA</td>
+                                        <td>dolores.chambers@example.com</td>
+                                        <td>21 Sep, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$11,170</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>267400</td>
+                                        <td>Fire Department</td>
+                                        <td>nevaeh.simmons@example.com</td>
+                                        <td>17 Oct, 2020</td>
+                                        <td>
+                                            <span class="badge bg-danger-subtle text-danger fw-normal px-3 py-2">
+                                                Failed
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$28,000</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>449003</td>
+                                        <td>Insurance Carrier</td>
+                                        <td>curtis.weaver@example.com</td>
+                                        <td>21 Sep, 2020</td>
+                                        <td>
+                                            <span class="badge bg-success-subtle text-success fw-normal px-3 py-2">
+                                                Paid
+                                            </span>
+                                        </td>
+                                        <td class="text-end">$10,000</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
-                    <div class="table-responsive mt-3">
-                        <table class="table table-borderless">
-                            <thead class="text-muted">
-                                <tr>
-                                    <th>Invoice</th>
-                                    <th>Company</th>
-                                    <th>Email</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>651535</td>
-                                    <td>Public Adjusting Firm</td>
-                                    <td>georgia.young@example.com</td>
-                                    <td>24 May 2020</td>
-                                    <td class="text-success fw-bold">Paid</td>
-                                    <td>$47,800</td>
-                                </tr>
-                                <tr>
-                                    <td>651535</td>
-                                    <td>Subcontractor</td>
-                                    <td>jackson.graham@example.com</td>
-                                    <td>1 Feb 2020</td>
-                                    <td class="text-danger fw-bold">Failed</td>
-                                    <td>$10,200</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
-
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

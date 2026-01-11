@@ -72,3 +72,16 @@ input#search {
     color: #3E3E3E;
     opacity: 1;
 }
+
+
+.dashboard{
+    background-color: #FAFAFA;
+}
+
+.search-input {
+  background-image: url("../images/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 16px;
+  padding-left: 40px; 
+}

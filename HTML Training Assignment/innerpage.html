@@ -6,40 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/innerpage.css">
-    <script src="./js/bootstrap.bundle.min.js"></script>
+
     <title>Document</title>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+
     <!-- navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-3 sticky-top shadow-sm">
+
         <div class="container-fluid">
+            <img class=" d-lg-none me-2" type="button" data-bs-toggle="offcanvas" src="./images/menu-bar.svg"
+                data-bs-target="#sidebarOffcanvas" alt="menu-bar">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <a class="navbar-brand ms-2" href="#">
-                <img src="./images/logo.svg" width="140">
+            <a class="navbar-brand me-auto" href="#">
+                <img src="./images/logo.svg" width="140" alt="Company Logo">
             </a>
 
-            <form class="d-none d-md-flex mx-auto w-50">
-                <input class="form-control" type="search" placeholder="Search">
+            <form class="d-none  d-md-flex mx-auto w-50">
+                <input class="form-control search-input rounded-pill bg-light border-0" type="search"
+                    placeholder="Search">
             </form>
 
-            <div class="collapse navbar-collapse" id="topNav">
-                <div class="ms-auto d-flex align-items-center gap-4 mt-3 mt-lg-0">
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="#" class="text-dark position-relative d-sm-flex d-none">
                     <img src="./images/notification-icon.svg" width="22">
-                    <div class="d-flex align-items-center gap-2">
-                        <img src="./images/profile.png" width="32" class="rounded-circle">
-                        <span class="fw-medium">John Doe</span>
-                    </div>
+                </a>
+                <div class="d-flex align-items-center gap-2 ms-1">
+                    <img src="./images/profile.png" width="32" class="rounded-circle border">
+                    <span class="fw-medium d-none d-sm-inline">John Doe</span>
+                    <img src="./images/downward-arrow.svg" alt="">
                 </div>
             </div>
-
         </div>
     </nav>
+
 
     <div class="container-fluid">
         <div class="row">
@@ -47,12 +50,12 @@
             <aside class="col-lg-2 d-none d-lg-block vh-100 p-3 bg-red">
                 <div class="d-flex flex-column gap-3">
 
-                    <a href="./dashboard.html" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                    <a href="./dashboard.html" class="d-flex align-items-center gap-3 text-decoration-none text-dark ">
                         <img src="./images/dashboard-default.svg" width="20"> Dashboard
                     </a>
 
-                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold "
-                        style="color:#C8242F;">
+                    <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold  "
+                        style="color:#C8242F; background-color: #FFF3F4;">
                         <img src="./images/graph-active.svg" width="20"> Analysis
                     </a>
 
@@ -73,192 +76,303 @@
                     </a>
 
                     <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
-                        <img src="./images/search-icon.svg" width="20"> Settings
+                        <img src="./images/setting-default.svg" width="20"> Settings
                     </a>
 
                 </div>
             </aside>
 
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" style="width: 250px;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="nav-links d-flex flex-column gap-3">
+                        <a href="./dashboard.html"
+                            class="d-flex align-items-center gap-3 text-decoration-none text-dark ">
+                            <img src="./images/dashboard-default.svg" width="20"> Dashboard
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none fw-bold  "
+                            style="color:#C8242F; background-color: #FFF3F4;">
+                            <img src="./images/graph-active.svg" width="20"> Analysis
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/inbox-default.svg" width="20"> Inbox
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/clock-default.svg" width="20"> History
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/user-default.svg" width="20"> Users
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/maintenance-default.svg" width="20"> Maintenance
+                        </a>
+
+                        <a href="#" class="d-flex align-items-center gap-3 text-decoration-none text-dark">
+                            <img src="./images/setting-default.svg" width="20"> Settings
+                        </a>
+                    </div>
+                </div>
+            </div>
             <main class="col-lg-10">
                 <h4 class="mt-4">Analysis</h4>
-                <div class="row">
-                    <h5>One Column</h5>
-                    <form class="p-3 col-12">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
 
-                        <select class="form-control mb-3">
-                            <option>Default select</option>
-                            <img src="./images/downward-arrow.svg" alt="fgsd">
-                        </select>
-                        <div class="form-group mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
+                <h4 class="mb-4 text-secondary">One Column</h4>
 
-                    <h5>Two Column</h5>
-                    <form class="p-3 col-6">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Name">
-                            <label for="floatingName">Name</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                          </div>
-                          
-                    </form>
-                    <form class="p-3 col-6">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-                    </form>
-
-
-                    <h5>Three Column</h5>
-                    <form class="p-3 col-4">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-
-                        <select class="form-control mb-3">
-                            <option>Default select</option>
-                            <img src="./images/downward-arrow.svg" alt="fgsd">
-                        </select>
-                        <div class="form-group mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
-                    <form class="p-3 col-4">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-
-                        <select class="form-control mb-3">
-                            <option>Default select</option>
-                            <img src="./images/downward-arrow.svg" alt="fgsd">
-                        </select>
-                        <div class="form-group mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
-                    <form class="p-3 col-4">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-
-                        <select class="form-control mb-3">
-                            <option>Default select</option>
-                            <img src="./images/downward-arrow.svg" alt="fgsd">
-                        </select>
-                        <div class="form-group mb-3">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
-                    <h5>Four Column</h5>
-                    <form class="p-3 col-3">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-                    </form>
-                    <form class="p-3 col-3">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-                    </form>
-                    <form class="p-3 col-3">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-                    </form>
-                    <form class="p-3 col-3">
-                        <div class="form-group mb-3">
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
-                        </div>
-                    </form>
-
-
-
-                    <h5>Other Design Elements</h5>
-                    <div class="col-12 p-3">
-                        <h6>File Upload</h6>
-                        <div class="mb-3">
-                            <label class="btn btn-outline-danger">
-                                <img src="./images/cloud-upload-icon.svg" alt="" >
-                                Upload
-                                <input type="file" class="form-control required d-none" id="file" name="file" ng-model="Form.file" required>
-                            </label>
-                            
-                        </div>
-                    </div>
-                    <div class="col-12 p-3">
-                        <h6>Radio Button</h6>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label" for="inlineRadio1">Option 1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">Option 2</label>
-                        </div>
-                    </div>
-
-                    <div class="col-12 p-3">
-                        <h6>CheckBox</h6>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Option 1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Option 2</label>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <button type="button" class="btn btn-danger rounded-5 fw-bold">Primary</button>
-                        <button type="button" class="btn btn-outline-danger rounded-5 fw-bold">Secondary</button>
-                    </div>
-                    <div class="col-12 p-3">
-                        <h6>Tabs</h6>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                    type="button" role="tab" aria-controls="home" aria-selected="true">Tab 1</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                                    type="button" role="tab" aria-controls="profile" aria-selected="false">Tab 2</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                                    type="button" role="tab" aria-controls="contact" aria-selected="false">Tab 3</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only five
-                                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing</div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem
-                                ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur vero eum maxime enim quod
-                                praesentium quo facilis nulla laudantium qui id, minus a quidem architecto ab tenetur at.
-                                Minima, rerum!</div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem
-                                ipsum dolor, sit amet consectetur adipisicing elit. Accusantium delectus quidem tempora modi
-                                velit voluptatem qui cum hic voluptate porro animi, veniam sunt officiis! Aliquid
-                                consequatur molestiae eveniet voluptas reiciendis!</div>
-                        </div>
-                    </div>
-
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
                 </div>
+
+                <div class="mb-3">
+                    <select class="form-select text-secondary">
+                        <option selected>Dropdown</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Multiple line" rows="5"></textarea>
+                </div>
+
+                <h4 class="mb-4 text-secondary">Two Column</h4>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="position-relative">
+                            <label
+                                class="position-absolute top-0 start-0 translate-middle-y ms-3 px-1 bg-white text-secondary small">Username</label>
+                            <input type="text" class="form-control pt-3" value="johndoe">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="col-md-6">
+                        <select class="form-select text-secondary">
+                            <option selected>Dropdown</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h4 class="mb-4 text-secondary">Three Column</h4>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <fieldset class="border border-danger rounded p-1">
+                            <legend class="float-none w-auto px-2 fs-6 text-secondary">Focus</legend>
+                            <input type="text" class="form-control border-0 shadow-none p-0" autofocus>
+                        </fieldset>
+                    </div>
+
+                    <div class="col-md-4">
+                        <fieldset class="border rounded p-1">
+                            <legend class="float-none w-auto px-2 fs-6 text-secondary">Password</legend>
+                            <input type="password" class="form-control border-0 shadow-none p-0" value="password123">
+                        </fieldset>
+                    </div>
+
+                    <div class="col-md-4">
+                        <fieldset class="border border-secondary border-2 rounded p-1 bg-light"
+                            style="border-style: dashed !important;">
+                            <legend class="float-none w-auto px-2 fs-6 text-secondary">Disabled</legend>
+                            <input type="text" class="form-control border-0 shadow-none p-0 bg-light" value="johndoe"
+                                disabled>
+                        </fieldset>
+                    </div>
+                </div>
+                <h4 class="mb-4 text-secondary">Four Column</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-3">
+                        <div class="position-relative">
+                            <label
+                                class="position-absolute text-danger top-0 start-0 translate-middle-y ms-3 px-1 bg-white small">Designation</label>
+                            <input type="text" class="form-control border-danger pt-3" value="UI Designer">
+                        </div>
+                        <small class="text-danger">Enter Valid data</small>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="text" class="form-control pb-3" placeholder="Name">
+                        <small class="text-secondary">Enter your full Name as per ID</small>
+                    </div>
+
+
+                    <div class="col-md-3 ">
+                        <div class="position-relative ">
+                            <label
+                                class="position-absolute top-0 start-0 translate-middle-y ms-3 px-1 bg-white text-secondary small">Username</label>
+                            <input type="text" class="form-control pt-3" value="johndoe">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select text-secondary pb-3">
+                            <option selected>Select</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <h5>Other Design Elements</h5>
+                <h6 class="mt-4">File Upload</h6>
+                <div class="col-12 p-3">
+                    <div class="mb-3">
+                        <label class="btn btn-outline-danger rounded-5">
+                            <img src="./images/cloud-upload-icon.svg" alt="">
+                            Upload
+                            <input type="file" class="form-control required d-none" id="file" name="file"
+                                ng-model="Form.file" required>
+                        </label>
+
+                    </div>
+                </div>
+                <h6 class="mt-4">Radio Button</h6>
+                <div class="col-12 p-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Option 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Option 2</label>
+                    </div>
+                </div>
+
+                <h6 class="mt-4">CheckBox</h6>
+                <div class="col-12 p-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Option 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Option 2</label>
+                    </div>
+                </div>
+                <h6 class="mt-4">Snackbar</h6>
+
+                <div class="container">
+                    <div class="row g-3 snackbar-row">
+
+                        <div class="col-md-6">
+                            <div class="alert border border-danger d-flex align-items-center mb-0" role="alert">
+                                <img src="./images/error-icon.svg" width="24" height="24" class="flex-shrink-0 me-2"
+                                    alt="Error icon">
+                                <div class="text-danger">
+                                    This is an error Message
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="alert border border-info d-flex align-items-center mb-0" role="alert">
+                                <img src="./images/info-icon.svg" width="24" height="24" class="flex-shrink-0 me-2"
+                                    alt="Info icon">
+                                <div class="text-info">
+                                    This is an information message!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="alert border border-warning d-flex align-items-center mb-0" role="alert">
+                                <img src="./images/warning-icon.svg" width="24" height="24" class="flex-shrink-0 me-2"
+                                    alt="Warning icon">
+                                <div class="text-warning">
+                                    This is a warning message!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="alert border border-success d-flex align-items-center mb-0" role="alert">
+                                <img src="./images/success-icon.svg" width="24" height="24" class="flex-shrink-0 me-2"
+                                    alt="Success icon">
+                                <div class="text-success">
+                                    This is a Success message!
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <h6 class="mt-4">Call to action</h6>
+                <div class="p-3 col-12">
+                    <button type="button" class="btn btn-danger rounded-5 fw-bold ">Primary</button>
+                    <button type="button" class="btn btn-outline-danger rounded-5 fw-bold ">Secondary</button>
+                </div>
+                <h6 class="mt-4">Tabs</h6>
+                <div class="col-12 p-3">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">Tab 1</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Tab 2</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false">Tab 3</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                            took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only
+                            five
+                            centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing</div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur vero eum maxime enim
+                            quod
+                            praesentium quo facilis nulla laudantium qui id, minus a quidem architecto ab tenetur
+                            at.
+                            Minima, rerum!</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem
+                            ipsum dolor, sit amet consectetur adipisicing elit. Accusantium delectus quidem tempora
+                            modi
+                            velit voluptatem qui cum hic voluptate porro animi, veniam sunt officiis! Aliquid
+                            consequatur molestiae eveniet voluptas reiciendis!</div>
+                    </div>
+                </div>
+
+
             </main>
         </div>
-    </div>
     </div>
 
 </body>
